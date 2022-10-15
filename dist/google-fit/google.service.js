@@ -11,7 +11,7 @@ const common_1 = require("@nestjs/common");
 const google = require("googleapis");
 let GoogleService = class GoogleService {
     constructor() {
-        this.oauthClient = new google.Auth.OAuth2Client('1075486730502-ffh4u6ref4368irvsaq3qao6psdfk8t5.apps.googleusercontent.com', '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', 'http://localhost:3000/account/steps');
+        this.oauthClient = new google.Auth.OAuth2Client("1075486730502-ffh4u6ref4368irvsaq3qao6psdfk8t5.apps.googleusercontent.com", "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", "http://localhost:5173/profile");
     }
     getUrl(req) {
         const scopes = [
@@ -35,7 +35,7 @@ let GoogleService = class GoogleService {
             scope: scopes,
             state: JSON.stringify({
                 callbackUrl: req.body.callbackUrl,
-                userId: 'mohanramegowda7@gmail.com'
+                userId: "mohanramegowda7@gmail.com"
             })
         });
         return url;

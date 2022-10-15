@@ -1,4 +1,4 @@
-import { Request } from 'express';
+import { Request } from "express";
 export declare class GoogleService {
     private oauthClient;
     getUrl(req: Request): string;
